@@ -1,0 +1,87 @@
+.detailed-pricing-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin: 1rem;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  background: white;
+}
+
+.detailed-pricing-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.detailed-pricing-card-header {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.detailed-pricing-card-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.detailed-pricing-card-body {
+  padding: 1rem;
+}
+
+.price-section {
+  margin-bottom: 1.5rem;
+}
+
+.price-section:last-child {
+  margin-bottom: 0;
+}
+
+.price-section h4 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1rem;
+  color: #555;
+  font-weight: 600;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.25rem;
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 0;
+}
+
+.price-item:last-child {
+  margin-bottom: 0;
+}
+
+.price-label {
+  font-weight: 500;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.price-value {
+  font-weight: 600;
+  color: #333;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .price-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  .price-label {
+    font-size: 0.85rem;
+  }
+  
+  .price-value {
+    font-size: 0.85rem;
+  }
+}

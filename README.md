@@ -1,46 +1,76 @@
-# Getting Started with Create React App
+# Claude Pricing Monitor
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Claude API の料金監視・分析ツールです。CSVファイルをアップロードして、ユーザー別の使用料金を分析できます。
 
-## Available Scripts
+## 機能
 
-In the project directory, you can run:
+- **料金表示**: Claude各モデルの現在の料金を表示
+- **CSV分析**: 使用量CSVファイルをアップロードしてユーザー別料金を分析
+- **料金計算**: 入力・出力トークン数から自動的に料金を計算（USD・円表示）
+- **モデル別内訳**: ユーザーごとにどのモデルをどれだけ使用したかを詳細表示
 
-### `npm start`
+## Docker での起動方法
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 1. Docker Compose で起動（推奨）
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+# ビルドして起動
+docker-compose up -d
 
-### `npm test`
+# ログ確認
+docker-compose logs -f
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# 停止
+docker-compose down
+```
 
-### `npm run build`
+### 2. npm scripts を使用
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+# Docker イメージをビルド
+npm run docker:build
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# コンテナを起動
+npm run docker:up
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# ログを確認
+npm run docker:logs
 
-### `npm run eject`
+# コンテナを停止
+npm run docker:down
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+アプリケーションは http://localhost:3000 でアクセスできます。
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 開発環境での起動
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+# 依存関係をインストール
+npm install
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# 開発サーバーを起動
+npm start
+```
 
-## Learn More
+## CSVファイル形式
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+以下の形式のCSVファイルをアップロードしてください：
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```csv
+usage_date_utc,model_version,api_key,workspace,usage_type,usage_input_tokens_no_cache,usage_input_tokens_cache_write_5m,usage_input_tokens_cache_write_1h,usage_input_tokens_cache_read,usage_output_tokens,web_search_count
+2025-06-12,claude-3-5-haiku-20241022,claude_code_key_user_abc,Claude Code,standard,8,0,0,0,1,0
+```
+
+## 対応モデル
+
+- Claude 3.5 Haiku
+- Claude Sonnet 4
+- Claude 3 Opus  
+- Claude 3.5 Sonnet
+
+## 技術スタック
+
+- React 18 + TypeScript
+- Docker + Nginx
+- Papa Parse (CSV解析)
+- CSS3 (レスポンシブデザイン)

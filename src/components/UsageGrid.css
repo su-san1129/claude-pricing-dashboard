@@ -1,0 +1,60 @@
+.usage-grid-container {
+  margin-top: 2rem;
+}
+
+.usage-summary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.usage-summary h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.summary-costs {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+}
+
+.summary-usd {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Courier New', monospace;
+}
+
+.summary-jpy {
+  font-size: 1.5rem;
+  opacity: 0.9;
+}
+
+.usage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .usage-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .summary-costs {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .summary-usd {
+    font-size: 1.5rem;
+  }
+  
+  .summary-jpy {
+    font-size: 1.2rem;
+  }
+}

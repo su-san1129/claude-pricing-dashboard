@@ -1,0 +1,18 @@
+usage_date_utc,model_version,api_key,workspace,usage_type,usage_input_tokens_no_cache,usage_input_tokens_cache_write_5m,usage_input_tokens_cache_write_1h,usage_input_tokens_cache_read,usage_output_tokens,web_search_count
+2025-06-12,claude-3-5-haiku-20241022,claude_code_key_b-martin_wypl,Claude Code,standard,8,0,0,0,1,0
+2025-06-12,claude-3-5-haiku-20241022,claude_code_key_k-masaoka_guox,Claude Code,standard,7222,0,0,0,225,0
+2025-06-12,claude-3-5-haiku-20241022,claude_code_key_r-julien_gtkf,Claude Code,standard,10536,0,0,0,510,0
+2025-06-12,claude-3-5-haiku-20241022,claude_code_key_takahiro-suzuki_tibh,Claude Code,standard,167358,0,0,0,1591,0
+2025-06-12,claude-3-5-haiku-20241022,claude_code_key_y-takemoto_wqsi,Claude Code,standard,7023,0,0,0,274,0
+2025-06-12,claude-3-5-haiku-20241022,y-takemoto-api-key,Default,standard,9747,0,0,0,446,0
+2025-06-12,claude-sonnet-4-20250514,claude_code_key_k-masaoka_guox,Claude Code,standard,3012,60705,0,328205,5276,0
+2025-06-12,claude-sonnet-4-20250514,claude_code_key_r-julien_gtkf,Claude Code,standard,104,44656,0,236568,1527,0
+2025-06-12,claude-sonnet-4-20250514,claude_code_key_takahiro-suzuki_tibh,Claude Code,standard,1167,169132,0,2614461,19343,1
+2025-06-12,claude-sonnet-4-20250514,claude_code_key_y-takemoto_wqsi,Claude Code,standard,52,39741,0,176231,2744,0
+2025-06-12,claude-sonnet-4-20250514,y-takemoto-api-key,Default,standard,70,31072,0,76553,805,0
+2025-06-13,claude-3-5-haiku-20241022,claude_code_key_k-masaoka_guox,Claude Code,standard,3232,0,0,0,313,0
+2025-06-13,claude-3-5-haiku-20241022,claude_code_key_t-ozawa_igkw,Claude Code,standard,4255,0,0,0,293,0
+2025-06-13,claude-3-5-haiku-20241022,claude_code_key_takahiro-suzuki_tibh,Claude Code,standard,44438,0,0,0,479,0
+2025-06-13,claude-sonnet-4-20250514,claude_code_key_k-masaoka_guox,Claude Code,standard,56,37478,0,289864,4149,0
+2025-06-13,claude-sonnet-4-20250514,claude_code_key_t-ozawa_igkw,Claude Code,standard,87,76054,0,405597,8830,0
+2025-06-13,claude-sonnet-4-20250514,claude_code_key_takahiro-suzuki_tibh,Claude Code,standard,815,373841,0,1653074,14151,0
